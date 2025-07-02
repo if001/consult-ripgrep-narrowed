@@ -16,15 +16,12 @@ This behaves similarly to consult-ripgrep, but restricted to files matching keyw
 2. キーワードB：絞り込まれたファイルの中から、このキーワードで再検索します。
 3. ディレクトリ：検索を開始するルートディレクトリを指定します。
 
----
 
 ## 🔧 Requirements
 
-- Emacs 30.1
-- [`consult`](https://github.com/minad/consult)
+- [consult](https://github.com/minad/consult)
 - [ripgrep CLI](https://github.com/BurntSushi/ripgrep) (`rg` must be in your `$PATH`)
 
----
 
 ## 📦 Installation
 
@@ -34,5 +31,8 @@ Clone this repository and load it via `use-package` or `load-file`.
 
 ```elisp
 (use-package consult-ripgrep-narrowed
-  :load-path "~/path/to/consult-ripgrep-narrowed"
-  :commands (consult-ripgrep-narrowed))
+	:after consult
+	:load-path "~/path/to/consult-ripgrep-narrowed"
+	:commands (consult-ripgrep-narrowed))
+```
+
